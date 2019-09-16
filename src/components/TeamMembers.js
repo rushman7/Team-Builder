@@ -30,10 +30,6 @@ function TeamMembers() {
     setTeam([...team, user])
   }
 
-  memberToEdit = () => {
-    
-  }
-
   return (
     <div>
       <Form addUser={addUser}/>
