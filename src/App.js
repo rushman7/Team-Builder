@@ -1,11 +1,12 @@
 import React from 'react';
-import TeamMember from './components/TeamMembers';
+import TeamMembers from './components/TeamMembers';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <TeamMember />
+      <h2>Team-Builder</h2>
+      <TeamMembers />
     </div>
   );
 }
