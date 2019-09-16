@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
 
-function Form() {
+function Form(props) {
   const [user, setUser] = useState({
     'name': '',
     'email': '',
     'position': ''
   });
 
-  const dataChange = e => setUser({ [e.target.name]: e.target.value });
+  const dataChange = e => setUser({ ...user, [e.target.name]: e.target.value });
 
   const handleSubmit = e => {
     e.preventDefault();
+    props.addUser(user)
     console.log(user);
   }
 
@@ -33,7 +34,7 @@ function Form() {
           Position
           <input 
             type="text"
-            name="password"
+            name="position"
             onChange={dataChange}
           />
         </label>

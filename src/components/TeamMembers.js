@@ -26,11 +26,13 @@ function TeamMembers() {
     }
   ]);
 
-
+  const addUser = (user) => {
+    setTeam([...team, user])
+  }
 
   return (
     <div>
-      <Form />
+      <Form addUser={addUser}/>
       <div className="card-cont">
         {team.map((user, index) => {
           return <User data={user} key={index}/>
