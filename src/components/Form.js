@@ -12,7 +12,6 @@ function Form(props) {
   const handleSubmit = e => {
     e.preventDefault();
     props.addUser(user)
-    console.log(user);
   }
 
   return (

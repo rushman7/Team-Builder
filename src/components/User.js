@@ -8,6 +8,7 @@ function User(props) {
       <p>Name: {name}</p>
       <p>Email: {email}</p>
       <p>Position: {position}</p>
+      <button>Edit</button>
     </div>
   )
 }
