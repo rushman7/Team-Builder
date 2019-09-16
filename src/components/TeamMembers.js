@@ -30,9 +30,15 @@ function TeamMembers() {
     setTeam([...team, user])
   }
 
+  const memberToEdit = (user) => {
+    if (team[user]) {
+      setTeam([team[user] = user])
+    }
+  }
+
   return (
     <div>
-      <Form addUser={addUser}/>
+      <Form addUser={addUser} memberToEdit={memberToEdit}/>
       <div className="card-cont">
         {team.map((user, index) => {
           return <User data={user} key={index}/>
